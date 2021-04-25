@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) MiR FeRdOuS
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_weight="1"
+        android:text="Current Condition"
+        android:textAlignment="center"
+        android:textColor="@color/txtViewTxtLight"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Academic Reporting"
+            android:textAlignment="center"
+            android:textColor="@color/txtViewTxtLight"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Environment Reporting"
+            android:textAlignment="center"
+            android:textColor="@color/txtViewTxtLight"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/perfEvalGraph"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/perfEval"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="15dp"
+                    app:cpb_background_progressbar_color="@color/perfBckgrnd"
+                    app:cpb_background_progressbar_width="25dp"
+                    app:cpb_progressbar_color="@color/perfForgrnd"
+                    app:cpb_progressbar_width="25dp" />
+
+                <TextView
+                    android:id="@+id/perfEvalValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="30%"
+                    android:textColor="@color/txtViewTxtLight"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/perfRepGraph"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/perfRepAdmin"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="15dp"
+                    app:cpb_background_progressbar_color="@color/perfBckgrnd"
+                    app:cpb_background_progressbar_width="25dp"
+                    app:cpb_progressbar_color="@color/perfForgrnd"
+                    app:cpb_progressbar_width="25dp" />
+
+                <TextView
+                    android:id="@+id/perfRepAdminValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="80%"
+                    android:textColor="@color/txtViewTxtLight"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

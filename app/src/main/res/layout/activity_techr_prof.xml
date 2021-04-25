@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) MiR FeRdOuS
+  -->
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bckGround2"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context="com.example.f.schMon.view.school.TechrProfActivity">
+        <!--app bar-->
+        <include layout="@layout/toolbar" />
+
+        <include layout="@layout/progress_smooth" />
+
+        <!--body-->
+        <!-- <android.support.v4.widget.SwipeRefreshLayout
+             android:id="@+id/swipeSync"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">-->
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/teacherProfileBodyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tchrNoData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="25dp"
+                    android:text="No data available. Please Sync"
+                    android:textAlignment="center"
+                    android:textColor="@color/txtViewTxtLight"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/poImgView"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/teachername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="25dp"
+                        android:maxLines="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/txtViewTxtLight"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/teacherEducation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/txtViewTxtLight"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/teacherphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/txtViewTxtLight"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/teachergrade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/txtViewTxtLight"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp"
+                        android:maxLines="5"
+                        android:textAlignment="center"
+                        android:textColor="@color/txtViewTxtLight"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+        <!--   </android.support.v4.widget.SwipeRefreshLayout>-->
+
+    </LinearLayout>
+
+    <!--nav drawer-->
+    <include layout="@layout/nav_drawer_body" />
+
+
+</android.support.v4.widget.DrawerLayout>

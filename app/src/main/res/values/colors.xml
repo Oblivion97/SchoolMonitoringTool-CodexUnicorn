@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //______________ used app default theme basic color _____________________
+    <color name="colorPrimary">#174a55</color>
+    <color name="colorPrimaryDark">#10353d</color>
+    <color name="colorAccent">#174a55</color>
+
+    //______________ custom inside app color _____________________
+    <color name="btnTxt">#ffffff</color>
+    <color name="btnTxtWhite">#ffffff</color>
+    <color name="txtViewTxtLight">#154b65</color>
+    <color name="txtViewTxtDark">#ffffff</color>
+    <color name="pinkBrac1">#ff4081</color>
+    <color name="pinkBrac2">#b146c6</color>
+    <color name="bckground1">#ffffff</color>
+    <color name="bckGround2">#ffffff</color>
+    <color name="bckGroundGifLoad">#2f2c2b</color>
+    <color name="black">#201e1e</color>
+    <color name="dashBtn">#f9c2c2</color>
+    <color name="disabledBtn">#c3c6cc</color>
+
+
+    //_____________ notification ________________
+
+    <color name="notifBck">#ffffff</color>
+    <color name="notifToolbarTxt">#595959</color>
+    <color name="notifBckCard">#fffcf0</color>
+    <color name="notifTxtDark">#737373</color>
+    <color name="notifTxtLight">#ffffff</color>
+
+    //______________ DashBoard ______________
+    <color name="dashText">#FF164D61</color>
+    <color name="dashPrgfgrnd">#d6416b</color>
+    <color name="dashPrgbgrnd">#425258</color>
+
+    <!--
+    <color name="dashProgress"> #1682BB</color>
+    <color name="dashPrgfgrnd">#FF335894</color>
+    -->
+    //______________ bottom nav view _____________________
+    <color name="bottomNavBckGrnd">#174a55</color>
+    <color name="bottomNavText">#ffffff</color>
+    <color name="bottomNavIconUnselect">#ffffff</color>
+    <color name="bottomNavIconSelect">#35a3d0</color>
+
+
+    //______________ Log ______________
+
+    //rep admin
+
+    <color name="logbtnTxt">#278baf</color>
+    <color name="logbckgrnd">#ffffff</color>
+    <color name="logbckgrndrowRep">#ffffff</color>
+    <color name="logRepBorder">#278baf</color>
+    // eval
+
+    <color name="logbckgrndrowEval">#ffffff</color>
+
+
+    //______________ Login ______________
+    <color name="btnTxtLogin">#ffffff</color>
+    <color name="bckgrdLogin">#ededed</color>
+
+    //______________ Payment Color _____________________
+    <color name="colorPaymentList">#00695C</color>
+    <color name="textColorPrimary">#ffffff</color>
+
+    <color name="windowBackground">#ffffff</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="salary">#0f1148</color>
+    <color name="tabBckgrnd">#006699</color>
+    <color name="tabText">#ffffff</color>
+    <color name="tabTextSelected">#35A3D0</color>
+    <color name="techerssalary">#01579B</color>
+
+    //_______________ evaluation _______________________
+    <color name="borderColorAnswer">#174a55</color>
+
+    //______________ nav drawer _____________________
+    <color name="navDrawerList">#176484</color>
+    <color name="navDrawerHeader">#114a61</color>
+    <color name="colorNavText">#ffffff</color>
+    <color name="navDrawerSelect">#9b55e1</color>
+    <color name="colorNavIcon">#ffffff</color>
+
+    <!-- <color name="navDrawerList">#092E49</color>
+     <color name="navDrawerHeader">#9b7bba</color>
+     <color name="colorNavText">#FFE0D2</color>
+     <color name="navDrawerSelect">#245579</color>
+     <color name="colorNavIcon">#FFBD28</color>-->
+
+    ______________ radio in reporting admin fragment _____________________
+    <color name="RepDivider">#ffffff</color>
+
+    // radio in reporting admin fragment
+
+    <color name="green">#7ebf86</color>
+    <color name="red">#d41e15</color>
+    <color name="yellow">#baa44d</color>
+
+    //_____________progress bar_____________________________________
+    <color name="progressBarBckgrnd">#2F2C2B</color>
+
+
+    //______________ Extra _____________________
+
+    <color name="colorCream">#f5e3b9</color>
+
+    <color name="listcolor">#78909c</color>
+
+    <color name="colorRedDeep">#94172a</color>
+    <color name="colorGrey">#232323</color>
+
+    <color name="transparent">#00000000</color>
+
+    //________________ user profile ___________________________
+
+    <color name="POName">#0c7e84</color>
+
+
+    //______________ Performance color _____________________
+    <color name="perf0to20">#a73e3e</color>
+    <color name="perf21to40">#35597c</color>
+    <color name="perf41to60">#a46161</color>
+    <color name="perf61to80">#59b4cf</color>
+    <color name="perf81to100">#2c846b</color>
+
+    //in school profile
+    <!-- <color name="perfBckgrnd">#494949</color>
+     <color name="perfForgrnd">#9f0000</color>
+     -->
+    //new look by Hridoy
+    <color name="perfBckgrnd">#060606</color>
+    <color name="perfForgrnd">#35A3D0</color>
+
+
+    //______________ unused _____________________
+    <color name="white">#ffffff</color>
+
+
+    //______________ colors for smooth progressbar _____________________
+    <integer-array name="colors">
+        <item>@color/holo_blue_dark</item>
+        <item>@color/holo_yellow_dark</item>
+        <item>@color/holo_green_dark</item>
+        <item>@color/holo_purple_dark</item>
+        <item>@color/holo_red_dark</item>
+    </integer-array>
+
+    <integer-array name="gplus_colors">
+        <item>@color/gplus_color_1</item>
+        <item>@color/gplus_color_2</item>
+        <item>@color/gplus_color_3</item>
+        <item>@color/gplus_color_4</item>
+    </integer-array>
+
+    <integer-array name="pocket_bar_colors">
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_4</item>
+        <item>@color/pocket_color_4</item>
+        <item>@color/pocket_color_4</item>
+        <item>@color/pocket_color_4</item>
+    </integer-array>
+
+    <integer-array name="pocket_background_colors">
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_4</item>
+    </integer-array>
+
+    <color name="pocket_color_1">#85edb9</color>
+    <color name="pocket_color_2">#34bdb7</color>
+    <color name="pocket_color_3">#ee4458</color>
+    <color name="pocket_color_4">#fcb74d</color>
+
+    <color name="gplus_color_1">#3e802f</color>
+    <color name="gplus_color_2">#f4b400</color>
+    <color name="gplus_color_3">#427fed</color>
+    <color name="gplus_color_4">#b23424</color>
+
+    <color name="holo_blue_dark">#0099cc</color>
+    <color name="holo_yellow_dark">#ff8800</color>
+    <color name="holo_green_dark">#669900</color>
+    <color name="holo_purple_dark">#9933cc</color>
+    <color name="holo_red_dark">#cc0000</color>
+
+
+    <!--=================== Gradient Collections =============================================================
+   instagram gradeint
+
+   <gradient
+       android:endColor="#ff4081"
+       android:startColor="#b146c6"
+       android:angle="45"></gradient>
+   -->
+    //--=================== Brac Education Main Color
+    =============================================================
+    <color name="BracSchool">#35A3D0</color>
+    <color name="BracSchool2">#174a55</color>
+    <color name="BottomNavColor">#174a55</color>
+    <color name="BackgroundApp">#ffffff</color>
+
+    <!--<color name="colorPrimary">#AA44AA</color>-->
+</resources>

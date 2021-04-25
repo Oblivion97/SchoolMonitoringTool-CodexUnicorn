@@ -1,0 +1,148 @@
+<resources>
+
+    <!--____________ Default application theme with old actionBar ________________-->
+
+    <style name="MirTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--for smooth progressbar below-->
+        <item name="spbStyle">@style/PocketProgressBar</item>
+        <item name="cpbStyle">@style/CircularThemeProgressBar</item>
+
+    </style>
+
+
+    <!--====================== start smoothscroolbar============================================-->
+    <style name="GNowProgressBar" parent="SmoothProgressBar">
+        <item name="spb_stroke_separator_length">0dp</item>
+        <item name="spb_sections_count">2</item>
+        <item name="spb_speed">1.7</item>
+        <item name="spb_progressiveStart_speed">2</item>
+        <item name="spb_progressiveStop_speed">3.4</item>
+        <item name="spb_interpolator">spb_interpolator_acceleratedecelerate</item>
+        <item name="spb_mirror_mode">true</item>
+        <item name="spb_reversed">true</item>
+        <item name="spb_colors">@array/gplus_colors</item>
+        <item name="spb_progressiveStart_activated">true</item>
+    </style>
+
+    <style name="CircularThemeProgressBar" parent="android:Widget.Holo.ProgressBar">
+        <item name="cpb_color">@color/cpb_default_color</item>
+        <item name="cpb_stroke_width">@dimen/cpb_default_stroke_width</item>
+        <item name="cpb_min_sweep_angle">@integer/cpb_default_min_sweep_angle</item>
+        <item name="cpb_max_sweep_angle">@integer/cpb_default_max_sweep_angle</item>
+        <item name="cpb_sweep_speed">@string/cpb_default_sweep_speed</item>
+        <item name="cpb_rotation_speed">@string/cpb_default_rotation_speed</item>
+    </style>
+
+    <style name="GradientProgressBar" parent="SmoothProgressBar">
+        <item name="spb_stroke_separator_length">0dp</item>
+        <item name="spb_sections_count">3</item>
+        <item name="spb_speed">1.7</item>
+        <item name="android:interpolator">@android:anim/decelerate_interpolator</item>
+        <item name="spb_colors">@array/gplus_colors</item>
+        <item name="spb_gradients">true</item>
+    </style>
+
+    <style name="PocketProgressBar" parent="SmoothProgressBar">
+        <item name="spb_stroke_separator_length">4dp</item>
+        <item name="spb_sections_count">4</item>
+        <item name="spb_speed">1</item>
+        <item name="android:interpolator">@anim/pocket_interpolator</item>
+        <item name="spb_colors">@array/pocket_bar_colors</item>
+        <item name="spb_progressiveStart_activated">true</item>
+        <item name="spb_generate_background_with_colors">false</item>
+    </style>
+
+
+    <!--====================== END smoothscroolbar============================================-->
+
+
+    <!-- theme without old actionBar so that new toolbar can be used-->
+    <style name="MirTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <!-- ____________ login activity ____________ -->
+
+    <!--username pass login activity underline of edittext color-->
+    <style name="EditTextLogin">
+        <!--<item name="android:background">@drawable/apptheme_edit_text_holo_light</item>-->
+        <item name="android:textColor">@color/pinkBrac1</item>
+    </style>
+
+
+    <!-- ____________ payment activity ____________ -->
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!-- ____________ full screen dialog ____________ -->
+
+    <style name="FullScreenDialogStyle" parent="MirTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+
+<!--full screen dialog 2-->
+    <style name="Dialog.FullScreen" parent="Theme.AppCompat.Dialog">
+        <item name="android:padding">0dp</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <!--________________ TRASPERENT THEME ____________________________________-->
+    <!--for appcompat activity-->
+    <style name="MirTheme.AppCompat.Translucent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:background">#33000000
+        </item> <!-- Or any transparency or color you need -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+
+    <!--for normal activity-->
+
+
+    <style name="Theme.Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+    <!-- <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
+
+     </style>
+
+     <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+         <item name="windowNoTitle">true</item>
+         <item name="windowActionBar">false</item>
+         <item name="colorPrimary">@color/colorPrimary</item>
+         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+         <item name="colorAccent">@color/colorAccent</item>
+     </style>
+
+
+
+
+
+
+     <style name="AppTheme.LoginStyle">
+         <item name="windowActionBar">false</item>
+         <item name="windowNoTitle">true</item>
+     </style>-->
+
+
+</resources>

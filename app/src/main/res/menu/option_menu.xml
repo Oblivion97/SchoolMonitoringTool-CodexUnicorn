@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) MiR FeRdOuS
+  -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home_menu"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/date_menu"
+        android:icon="@drawable/ic_date_range"
+        android:title="Calender"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/sync_menu"
+        android:icon="@drawable/ic_sync"
+        android:title="Sync Basics"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/sync_menu_details"
+        android:title="Sync Details"
+        android:visible="false"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/settings_menu"
+        android:icon="@drawable/ic_action_settings"
+        android:title="Settings"
+        android:visible="false"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/history_menu"
+        android:icon="@drawable/ic_history_white"
+        android:title="History"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/submit_menu"
+        android:icon="@drawable/ic_submit"
+        android:title="Submit"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/edit_menu"
+        android:icon="@drawable/ic_edit_white"
+        android:title="Edit"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/del_menu"
+        android:icon="@drawable/ic_delete_sweep_white"
+        android:title="Delete"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/info_menu"
+        android:icon="@drawable/ic_info_white"
+        android:title="Info"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/notif_all_menu"
+        android:icon="@drawable/ic_info_black"
+        android:title="All Notification"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/update_menu"
+        android:icon="@drawable/ic_update"
+        android:title="Update"
+        android:visible="false"
+        app:showAsAction="always" />
+
+
+</menu>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) MiR FeRdOuS
+  -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_log"
+        android:icon="@drawable/ic_history_black"
+        android:title="Log" />
+    <item
+        android:id="@+id/navigation_schList"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/navigation_notific"
+        android:icon="@drawable/ic_notifications"
+        android:title="Notification" />
+
+
+</menu>

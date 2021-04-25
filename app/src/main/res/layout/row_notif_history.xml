@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) MiR FeRdOuS
+  -->
+
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_margin="2dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_background_selector"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="96">
+
+        <RelativeLayout
+            android:id="@+id/notification_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/historyDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="Report Date: "
+                android:textColor="@color/btnTxtWhite" />
+
+            <TextView
+                android:id="@+id/notification_school_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/historyDate"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:text="School Name"
+                android:textColor="@color/btnTxtWhite"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/notification_school_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notification_school_name"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:text="Grade"
+                android:textColor="@color/btnTxtWhite"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/notification_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notification_school_grade"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:text="Problem: problem name"
+                android:textColor="@color/btnTxtWhite"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/notification_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notification_title"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:text="Problem Description"
+                android:textColor="@color/btnTxtWhite"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/notification_target"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notification_description"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:text="Target Date: "
+                android:textColor="@color/btnTxtWhite"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/notification_solve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notification_target"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:text="Solved Date: "
+                android:textColor="@color/btnTxtWhite"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/historyDelete"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="5"
+        android:background="@color/listcolor"
+        android:padding="1dp"
+        app:srcCompat="@drawable/ic_delete_sweep_black" />
+</LinearLayout>
+
+
+    <!--</FrameLayout>-->

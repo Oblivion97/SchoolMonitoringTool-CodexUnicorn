@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) MiR FeRdOuS
+  -->
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.f.schMon.view.sync_mir.SyncActivity">
+
+        <include layout="@layout/toolbar" />
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:visibility="gone">
+
+            <include layout="@layout/progress_smooth" />
+        </LinearLayout>
+
+        <include layout="@layout/content_sync_activity" />
+
+
+    </LinearLayout>
+
+
+    <!--navigationdrawer-->
+
+    <include layout="@layout/nav_drawer_body" />
+
+</android.support.v4.widget.DrawerLayout>
+

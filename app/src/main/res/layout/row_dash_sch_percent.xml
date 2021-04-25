@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) ARK
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dashRowParent"
+    android:layout_width="wrap_content"
+    android:layout_height="45dp">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/dash_listBullets"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/bullets" />
+    <!---->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/dash_listBullets"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_schoolName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="Not Available"
+            android:textColor="@color/dashText"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_schoolType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Primary School"
+            android:textColor="@color/dashText"
+            android:textSize="8sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_section_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:text="0%"
+        android:textColor="@color/dashText"
+        android:textSize="10sp"
+        android:textStyle="italic" />
+
+</RelativeLayout>

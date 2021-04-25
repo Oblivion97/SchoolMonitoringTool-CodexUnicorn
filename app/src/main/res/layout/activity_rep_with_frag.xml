@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) MiR FeRdOuS
+  -->
+
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.f.schMon.view.report_environment.RepActivity"
+    tools:openDrawer="start">
+
+
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bckGround2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar" />
+
+            <include
+                android:id="@+id/noDataContainer"
+                layout="@layout/no_data_layout" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/toolbar_container"
+                android:orientation="vertical"
+                android:weightSum="100"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <include layout="@layout/progress_smooth" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/repListRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="90" />
+
+                <ListView
+                    android:id="@+id/simpleListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="90"
+                    android:divider="@color/RepDivider"
+                    android:dividerHeight="1dp"
+                    android:footerDividersEnabled="false"
+                    android:visibility="gone" />
+
+                <!--btn-->
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="10"
+                    android:background="@color/colorAccent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/repDateBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/colorAccent"
+                        android:text="Date"
+                        android:textAlignment="center"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/repSubmitBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/colorAccent"
+                        android:text="Submit"
+                        android:textAlignment="center"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <include layout="@layout/nav_drawer_body" />
+
+
+</android.support.v4.widget.DrawerLayout>

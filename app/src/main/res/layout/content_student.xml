@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) MiR FeRdOuS
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bckGround2"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.example.f.schMon.view.student.StdListActivity">
+    <!--app bar-->
+    <include layout="@layout/toolbar" />
+
+    <include layout="@layout/progress_smooth" />
+
+    <!-- <android.support.v4.widget.SwipeRefreshLayout
+         android:id="@+id/swipeSync"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">-->
+    <!--body-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/noDataTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="@string/no_data_available_offline_please_sync"
+            android:textAlignment="center"
+            android:textColor="@color/txtViewTxtLight"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/searchContainer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/border_report_acad_ans"
+            android:weightSum="100">
+
+            <!--for search -->
+            <EditText
+                android:id="@+id/searchET"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="86"
+                android:hint="@string/search_by_student_s_name"
+                android:maxLines="1"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center" />
+
+            <ImageButton
+                android:id="@+id/searchBtn"
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="14"
+                android:onClick="onClickSearch"
+                android:layout_gravity="center"
+                android:background="@color/btnTxtWhite"
+                android:src="@drawable/search_logo_hm"
+                android:text="@string/srch" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listViewStdSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </ListView>
+    </LinearLayout>
+
+
+    <!--  </android.support.v4.widget.SwipeRefreshLayout>-->
+
+</LinearLayout>

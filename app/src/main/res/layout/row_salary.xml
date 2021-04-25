@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="0dp"
+
+    android:background="@drawable/btn_round_salary"
+    android:orientation="horizontal">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_salary"
+    >
+    <TextView
+        android:id="@+id/teachNameTV_salary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_centerVertical="true"
+        android:maxLines="1"
+        android:text="Name"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/schNameTV_salary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/teachNameTV_salary"
+        android:text="Schhol"
+        android:layout_margin="5dp"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/taka_salary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TK"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+</RelativeLayout>
+
+</RelativeLayout>

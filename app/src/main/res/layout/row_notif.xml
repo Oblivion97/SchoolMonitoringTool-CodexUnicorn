@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) MiR FeRdOuS
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/card_background_selector">
+
+    <LinearLayout
+        android:id="@+id/notification_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="75"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/notification_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:text="2 Nov 2017"
+                android:textColor="@color/btnTxtWhite"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/notification_school_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notification_date"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:text="School Name"
+                android:textColor="@color/btnTxtWhite"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/notification_school_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notification_school_name"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:text="School Grade"
+                android:textColor="@color/btnTxtWhite"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/notification_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notification_school_grade"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:text="Problem: monthName"
+                android:textColor="@color/btnTxtWhite"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/notification_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notification_title"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:text="Description"
+                android:textColor="@color/btnTxtWhite"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/notification_target"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notification_description"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:text="Target Date to Solve: "
+                android:textColor="@color/btnTxtWhite"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <!--checkbox-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkboxYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Yes"
+                android:textColor="@color/btnTxtWhite" />
+
+            <CheckBox
+                android:id="@+id/checkboxNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="No "
+                android:textColor="@color/btnTxtWhite" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

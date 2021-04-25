@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) ARK
+  -->
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/sync_school"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/sync_teacher"
+                android:layout_margin="20dp"
+                android:text="School List"
+                android:textColor="@color/pinkBrac1"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressBarSchool"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/sync_teacher"
+                android:layout_margin="20dp"
+                android:layout_toRightOf="@+id/sync_school"
+                android:indeterminate="true"
+                android:max="100"
+                android:padding="4dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/sync_teacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/sync_student"
+                android:layout_margin="20dp"
+                android:text="Teacher List"
+                android:textColor="@color/pinkBrac1"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressBarTeacher"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/sync_student"
+                android:layout_margin="20dp"
+                android:layout_toRightOf="@+id/sync_teacher"
+                android:indeterminate="true"
+                android:max="100"
+                android:padding="4dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/sync_student"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/sync_total_download"
+                android:layout_margin="20dp"
+                android:text="Student List"
+                android:textColor="@color/pinkBrac1"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sync_total_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/syncBtnAll"
+                android:layout_margin="10dp"
+                android:text="Total downloaded : "
+                android:textColor="@color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sync_total_download_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/syncBtnAll"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@+id/sync_total_download"
+                android:text="0"
+                android:textColor="@color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sync_total_downloadValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/syncBtnAll"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@+id/sync_total_download_value"
+                android:text="0"
+                android:textColor="@color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressBarStudent"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/sync_total_download_value"
+                android:layout_margin="20dp"
+                android:layout_toRightOf="@+id/sync_student"
+                android:indeterminate="true"
+                android:max="100"
+                android:padding="4dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/syncBtnAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:onClick="syncAll"
+                android:text="Sync Now" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <!--navigationdrawer-->
+
+    <include layout="@layout/nav_drawer_body" />
+
+</android.support.v4.widget.DrawerLayout>
+

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) MiR FeRdOuS
+  -->
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/repCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bckGround2"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <!-- TextView for displaying ques-->
+        <TextView
+            android:id="@+id/repQuestion"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:text="Is there Drinking Water Available in School? "
+            android:textColor="@color/txtViewTxtLight"
+            android:textSize="16sp" />
+        <!-- RadioGroup for grouping of RadioButton-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="19dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RadioButton
+                    android:id="@+id/yes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="Yes"
+                    android:textColor="@color/txtViewTxtLight"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:text="No"
+                    android:textColor="@color/txtViewTxtLight"
+                    android:textSize="16sp" />
+            </RadioGroup>
+        </LinearLayout>
+        <!--display no details-->
+        <LinearLayout
+            android:id="@+id/repNoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/repDetailsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--  <TextView
+                          android:id="@+id/repPriority"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_margin="5dp"
+                          android:text="Problem Priority: "
+                          android:textSize="15sp" />-->
+
+                    <TextView
+                        android:id="@+id/repPriority"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Problem Priority: 0"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!-- <TextView
+                     android:id="@+id/repDetails"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="start"
+                     android:layout_marginLeft="5dp"
+                     android:text="Problem Details: "
+                     android:textSize="15sp" />-->
+
+                <TextView
+                    android:id="@+id/repDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginLeft="5dp"
+                    android:text="Problem Details:\n There is no tubewell in the school.There is no tubewell in the school. There is no tubewell in the school."
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!--input no details-->
+            <LinearLayout
+                android:id="@+id/repNoContainerInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="2dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/repProbDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="true"
+                    android:hint="Enter report details" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupAdminReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/radioMajor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight="1"
+                            android:text="Major"
+                            android:textColor="@color/red"
+                            app:buttonTint="@color/red" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/radioModerate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight="1"
+                            android:text="Moderate"
+                            android:textColor="@color/yellow"
+                            app:buttonTint="@color/yellow" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/radioMinor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight="1"
+                            android:text="Minor"
+                            android:textColor="@color/green"
+                            app:buttonTint="@color/green" />
+                    </RadioGroup>
+
+                    <Button
+                        android:id="@+id/repOK"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/radioGroupAdminReport"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="5dp"
+                        android:background="@color/green"
+                        android:text="Submit This"
+                        android:textColor="@color/btnTxtWhite" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

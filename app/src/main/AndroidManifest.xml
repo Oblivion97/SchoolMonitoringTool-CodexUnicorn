@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.f.schMon">
+
+    <uses-sdk
+        android:maxSdkVersion="26"
+        android:minSdkVersion="15"
+        android:targetSdkVersion="26" />
+    <!-- =================  permissions  ======================= -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RITE_CALENDAR" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+
+    <application
+        android:name=".controller.A"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MirTheme.NoActionBar">
+
+        <!-- Broadcast receiver -->
+        <receiver android:name=".view.notification.NotifAlarmReceiver" />
+        <receiver
+            android:name=".view.notification.BootReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <!-- For HTC devices -->
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".view.login.StartingActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/Dialog.FullScreen" />
+        //__________________splash screen and Login____________________________________
+        <activity
+            android:name=".view.splash.SplashScreen"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.login.LoginActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        //____________________sync________________________________
+        <activity
+            android:name=".analyseAndTest.syncAsikOld.DataSyncing"
+            android:excludeFromRecents="true"
+            android:label="Synchronise Data"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        //____________________sync intent service________________________________
+        <activity
+            android:name=".analyseAndTest.syncIntent.SyncAll"
+            android:excludeFromRecents="true"
+            android:label="Synchronise Data"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+
+        <service
+            android:name=".analyseAndTest.syncIntent.DownloadService"
+            android:label="My Service" />
+        //_________________ sync mir _____________________
+        <activity
+            android:name=".view.sync_mir.SyncActivity"
+            android:excludeFromRecents="true"
+            android:label="Synchronise Data"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".view.sync_mir.ForegroundService"
+            android:enabled="true"
+            android:exported="true" />
+        //__________________dash____________________________________
+        <activity
+            android:name=".view.dashboard.DashboardActivity"
+            android:label="Overview of Schools"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        //__________________notification____________________________________
+        <service
+            android:name=".view.notification.NotifService"
+            android:label="Notif Service" />
+
+        <activity
+            android:name=".view.notification.NotifActivity"
+            android:excludeFromRecents="true"
+            android:label="Notifications"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        <activity
+            android:name=".view.notification.HistoryActivity"
+            android:excludeFromRecents="true"
+            android:label="History of Solved Tasks"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        //____________________school___________________________________
+        <activity
+            android:name=".view.school.SchoolListActivity"
+            android:excludeFromRecents="true"
+            android:label="School List"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        <activity
+            android:name=".view.school.SchoolProfileActivity"
+            android:excludeFromRecents="true"
+            android:label="School Details"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        <activity
+            android:name=".view.school.TechrProfActivity"
+            android:excludeFromRecents="true"
+            android:label="Teacher&apos;s Profile"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        <activity
+            android:name=".view.student.StdListActivity"
+            android:excludeFromRecents="true"
+            android:label="Students List"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".view.student.StdListSearchActivity"
+            android:excludeFromRecents="true"
+            android:label="Search Result"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        //_____________ Payment old not used __________________________
+        <activity
+            android:name=".view.paymentsWithTab.PaymentActivityTabSch"
+            android:excludeFromRecents="true"
+            android:label="School Fee &amp; Salary"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        <activity
+            android:name=".view.paymentsWithTab.PaymentActivityTabStd"
+            android:excludeFromRecents="true"
+            android:label="Student Fee &amp; Salary"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        //_____________ payment new __________________________
+        <activity
+            android:name=".view.payments.SchPayActivity"
+            android:excludeFromRecents="true"
+            android:label="School Payment"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        <activity
+            android:name=".view.payments.StdPayActivity"
+            android:excludeFromRecents="true"
+            android:label="Student Payment"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        //_____________Reporting__________________________
+        <!-- new with frag -->
+        <activity
+            android:name=".view.report_environment.RepActivity"
+            android:excludeFromRecents="true"
+            android:label="Environment Reporting"
+            android:launchMode="standard"
+            android:theme="@style/MirTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".analyseAndTest.report.RepAdminActivity"
+            android:excludeFromRecents="true"
+            android:label="Environment Reporting"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        <!-- new -->
+        <activity
+            android:name=".analyseAndTest.reporting.ReportingActivity"
+            android:excludeFromRecents="true"
+            android:label="Environment Reporting"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- new with frag 2 -->
+        <activity
+            android:name=".analyseAndTest.repFragUnused.RepActivity2"
+            android:excludeFromRecents="true"
+            android:label="Environment Reporting"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        //_____________ Log Edit__________________________
+        <activity
+            android:name=".view.log_edit.LogEditActivityTab"
+            android:excludeFromRecents="true"
+            android:label="Previous Report Log"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        //_____________ evaluation __________________________
+        <activity
+            android:name=".view.evaluation.EvlActivity"
+            android:excludeFromRecents="true"
+            android:label="Academic Reporting"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        <activity
+            android:name=".view.evaluation.AnsActivity"
+            android:excludeFromRecents="true"
+            android:label="Answer"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        <activity
+            android:name=".view.evaluation.AddQuesActivity"
+            android:excludeFromRecents="true"
+            android:label="New Question"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        //_____________ About __________________________
+        <activity
+            android:name=".view.common.AboutActivity"
+            android:excludeFromRecents="true"
+            android:label="About Us"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        <activity
+            android:name=".view.common.WebActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        <activity
+            android:name=".view.common.SettingsActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".view.common.UserProfActivity"
+            android:excludeFromRecents="true"
+            android:label="Profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+
+        <!-- ________________test activity__________________ -->
+        // test dash
+        <activity
+            android:name=".analyseAndTest.TestActivity0"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_dash"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        <activity
+            android:name=".analyseAndTest.TestActivity1"
+            android:label="Test Activity 1"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".analyseAndTest.TestActivity2"
+            android:label="Test Activity 2"
+            android:screenOrientation="portrait"
+            android:theme="@style/MirTheme.NoActionBar" />
+        <activity
+            android:name=".analyseAndTest.TestActivity3"
+            android:label="Test Activity 3" />
+        android:screenOrientation="portrait"
+        <activity android:name=".analyseAndTest.TestActivity4" />
+        <activity
+            android:name=".analyseAndTest.TestActivity5"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".analyseAndTest.TestActivity6"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".analyseAndTest.TestActivity7"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_test7" />
+        <activity android:name=".analyseAndTest.TestActivityDBList" />
+        <activity android:name=".view.school.TechActivity"></activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="33e8ca8e326c937360ec4d1709e051fbfdf436ac" />
+    </application>
+
+</manifest>

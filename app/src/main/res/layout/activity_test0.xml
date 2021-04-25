@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:cntx="com.example.f.schMon.analyseTemp.TestActivity0"
+    tools:openDrawer="start">-->
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bckGround2"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/testActivity7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_round_edge_inside_app"
+                android:text="Test Activity 7"
+                android:textColor="@color/btnTxt" />
+
+            <Button
+                android:id="@+id/dbListBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_round_edge_inside_app"
+                android:text="DB List"
+                android:textColor="@color/btnTxt" />
+
+
+            <Button
+                android:id="@+id/test0API"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_round_edge_inside_app"
+                android:text="Retrofit"
+                android:textColor="@color/btnTxt" />
+
+            <Button
+                android:id="@+id/newReporting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_round_edge_inside_app"
+                android:text="New Reporting"
+                android:textColor="@color/btnTxt" />
+
+            <Button
+                android:id="@+id/btnCopyDBDash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_round_edge_inside_app"
+                android:onClick="onCopyDBDash"
+                android:text="CopyDB"
+                android:textColor="@color/btnTxt" />
+
+            <Button
+                android:id="@+id/btnDeleteDB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_round_edge_inside_app"
+                android:onClick="onClickDeleteDB"
+                android:text="Delete DB"
+                android:textColor="@color/btnTxt" />
+
+            <Button
+                android:id="@+id/btnLogOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_round_edge_inside_app"
+                android:onClick="onClickLogout"
+                android:text="@string/Logout"
+                android:textColor="@color/btnTxt" />
+
+            <Button
+                android:id="@+id/btnPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_round_edge_inside_app"
+                android:onClick="onClickPayment"
+                android:text="Payment"
+                android:textColor="@color/btnTxt" />
+
+            <Button
+                android:id="@+id/btnTestAPI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_round_edge_inside_app"
+                android:onClick="onClickTestAPI"
+                android:text="TestActivity 1"
+                android:textColor="@color/btnTxt" />
+
+            <Button
+                android:id="@+id/btnTestAPI2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_round_edge_inside_app"
+                android:onClick="onClickTestAPI2"
+                android:text="TestActivity 2"
+                android:textColor="@color/btnTxt" />
+
+            <Button
+                android:id="@+id/btnTestActivity3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_round_edge_inside_app"
+                android:onClick="onClickTestActiity3"
+                android:text="TestActivity 3"
+                android:textColor="@color/btnTxt" />
+
+            <Button
+                android:id="@+id/btnTestActivity4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_round_edge_inside_app"
+                android:onClick="onClickTestActiity4"
+                android:text="TestActivity 4"
+                android:textColor="@color/btnTxt" />
+
+            <Button
+                android:id="@+id/btnTestActivity5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_round_edge_inside_app"
+                android:text="TestActivity 5"
+                android:textColor="@color/btnTxt" />
+
+
+            <Button
+                android:id="@+id/btnTestActivity6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_round_edge_inside_app"
+                android:text="TestActivity 6"
+                android:textColor="@color/btnTxt" />
+
+            <Button
+                android:id="@+id/btnReportMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_round_edge_inside_app"
+                android:onClick="onClickReportMain"
+                android:padding="10dp"
+                android:text="Report Main"
+                android:textColor="@color/btnTxt" />
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPaymentList"
+        android:gravity="bottom"
+        app:menu="@menu/bottom_nav_menu" />
+</LinearLayout><!--
+
+<include layout="@layout/nav_drawer_body" />
+    </android.support.v4.widget.DrawerLayout>
+
+-->

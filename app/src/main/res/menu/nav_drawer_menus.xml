@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?><!--  ~ Copyright (c) MiR FeRdOuS  -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Home"
+            android:icon="@drawable/ic_home"
+            android:state_checked="true"
+            android:title="Home" />
+        <item
+            android:id="@+id/SyncAll"
+            android:icon="@drawable/ic_sync"
+            android:title="Sync All"
+            android:visible="false" />
+        <item
+            android:id="@+id/SyncNewMir"
+            android:icon="@drawable/ic_sync"
+            android:title="Synchronise Data" />
+
+        <item
+            android:id="@+id/Reporting"
+            android:icon="@drawable/ic_report_menu_png"
+            android:title="Environment Reporting" />
+
+        <item
+            android:id="@+id/Evaluation"
+            android:icon="@drawable/ic_evaluation_menu_png"
+            android:title="Academic Reporting" />
+
+        <item
+            android:id="@+id/Checkin"
+            android:icon="@drawable/ic_location_on"
+            android:title="Check in"
+            android:visible="false" />
+        <item
+            android:id="@+id/Payment"
+            android:icon="@drawable/ic_payment"
+            android:title="Payment Statistics" />
+        <item
+            android:id="@+id/SchoolList"
+            android:icon="@drawable/ic_view_list"
+            android:title="School List" />
+        <item
+            android:id="@+id/Log"
+            android:icon="@drawable/ic_history_white"
+            android:title="Previous Report Log" />
+        <item
+            android:id="@+id/Testing"
+            android:title="For App Testing"
+            android:visible="true" />
+        <item
+            android:id="@+id/Settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings"
+            android:visible="false" />
+
+        <item
+            android:id="@+id/LogOut"
+            android:icon="@drawable/ic_logout"
+            android:title="Log Out"
+            android:visible="false" />
+        <item
+            android:id="@+id/About"
+            android:icon="@drawable/ic_about_menu_png"
+            android:title="About Us"
+            android:visible="true" />
+        <item
+            android:id="@+id/Exit"
+            android:icon="@drawable/ic_exit"
+            android:title="Exit"
+            android:visible="true" />
+    </group>
+
+</menu>

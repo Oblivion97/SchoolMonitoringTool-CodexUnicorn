@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) MiR FeRdOuS
+  --><!--
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">-->
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:cntx="com.example.f.schMon.analyseAndTest.TestActivity1"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <include layout="@layout/toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/bckgrdLogin"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/testBtn1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/feesch_button_round"
+                        android:gravity="center"
+                        android:onClick="onClickSyncSchools"
+                        android:padding="5dp"
+                        android:text="Sync SchoolsList"
+                        android:textColor="@color/btnTxtWhite" />
+
+                    <Button
+                        android:id="@+id/testBtn2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/feesch_button_round"
+                        android:gravity="center"
+                        android:onClick="onClickSyncTeacher"
+                        android:padding="5dp"
+                        android:text="Sync TeachersList"
+                        android:textColor="@color/btnTxtWhite" />
+
+                    <Button
+                        android:id="@+id/testBtn3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/feesch_button_round"
+                        android:gravity="center"
+                        android:onClick="onClickSyncStd"
+                        android:padding="5dp"
+                        android:text="Sync StudentsList"
+                        android:textColor="@color/btnTxtWhite" />
+
+                    <Button
+                        android:id="@+id/testBtn10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/feesch_button_round"
+                        android:gravity="center"
+                        android:onClick="onClickSyncSchoolsID"
+                        android:padding="5dp"
+                        android:text="Sync Schools ID"
+                        android:textColor="@color/btnTxtWhite" />
+
+                    <Button
+                        android:id="@+id/testBtn11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/feesch_button_round"
+                        android:gravity="center"
+                        android:onClick="onClickSyncTeacherID"
+                        android:padding="5dp"
+                        android:text="Sync Teachers ID"
+                        android:textColor="@color/btnTxtWhite" />
+
+                    <Button
+                        android:id="@+id/testBtn12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/feesch_button_round"
+                        android:gravity="center"
+                        android:onClick="onClickSyncStdID"
+                        android:padding="5dp"
+                        android:text="Sync Students ID"
+                        android:textAlignment="center"
+                        android:textColor="@color/btnTxtWhite" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="20dp"
+                        android:background="@color/bckgrdLogin"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/testBtn5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/feesch_button_round"
+                            android:gravity="center"
+                            android:onClick="StringFromFile"
+                            android:padding="5dp"
+                            android:text="StringFromFile"
+                            android:textColor="@color/btnTxtWhite" />
+
+                        <Button
+                            android:id="@+id/testAPIBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="3dp"
+                            android:background="@drawable/feesch_button_round"
+                            android:gravity="center"
+                            android:onClick="onClickTestAPICALL"
+                            android:padding="5dp"
+                            android:text="Test API Call"
+                            android:textColor="@color/btnTxtWhite" />
+
+                        <Button
+                            android:id="@+id/btnClear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="3dp"
+                            android:background="@drawable/feesch_button_round"
+                            android:gravity="center"
+                            android:onClick="onClickClear"
+                            android:padding="5dp"
+                            android:text="Clean"
+                            android:textColor="@color/btnTxt" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/deleteTableET"
+                                android:layout_width="199dp"
+                                android:layout_height="wrap_content" />
+
+                            <Button
+                                android:id="@+id/testBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/feesch_button_round"
+                                android:gravity="center"
+                                android:onClick="onClickDeleteTable"
+                                android:padding="5dp"
+                                android:text="Delete Table"
+                                android:textAlignment="center"
+                                android:textColor="@color/btnTxt" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnCopyDB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="3dp"
+                            android:background="@drawable/feesch_button_round"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Copy DB"
+                            android:textColor="@color/btnTxtWhite" />
+
+                        <Button
+                            android:id="@+id/testBtn8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="3dp"
+                            android:background="@drawable/feesch_button_round"
+                            android:gravity="center"
+                            android:onClick="onTestQuery"
+                            android:padding="5dp"
+                            android:text="testQuery"
+                            android:textColor="@color/btnTxt" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/testTV1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:padding="10dp" />
+                </ScrollView>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+<!--
+
+    <include layout="@layout/nav_drawer_body"/>
+
+
+</android.support.v4.widget.DrawerLayout>
+-->

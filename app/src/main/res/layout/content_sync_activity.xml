@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) MiR FeRdOuS
+  -->
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/syncActivityContentParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--common msg-->
+        <TextView
+            android:id="@+id/sync_Msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="Choose What to Sync"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!--sync reports-->
+        <LinearLayout
+            android:id="@+id/syncBtnReportContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/syncBtnReport"
+                    android:layout_width="200dp"
+                    android:textColor="@color/btnTxtWhite"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/btn_round_edge_inside_app"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Upload Reports"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/sync_progressBarSyncBtnReport"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    android:max="100"
+                    android:padding="19dp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/syncReportTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:text="Last Synced on " />
+        </LinearLayout>
+
+
+        <!--sync question-->
+        <LinearLayout
+            android:id="@+id/syncBtnQuesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/syncBtnQues"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="17dp"
+                    android:textColor="@color/btnTxtWhite"
+                    android:background="@drawable/btn_round_edge_inside_app"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:padding="10dp"
+                    android:text="Download Questions"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/sync_progressBarSyncBtnQues"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:indeterminate="true"
+                    android:max="100"
+                    android:padding="19dp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/syncQuesTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:text="Last Synced on " />
+        </LinearLayout>
+
+        <!--sync payment-->
+        <LinearLayout
+            android:id="@+id/syncBtnPayContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/syncBtnPay"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="17dp"
+                    android:textColor="@color/btnTxtWhite"
+                    android:background="@drawable/btn_round_edge_inside_app"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:padding="10dp"
+                    android:text="Sync Payments"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/sync_progressBarSyncBtnPay"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/btnTxtWhite"
+                    android:indeterminate="true"
+                    android:max="100"
+                    android:padding="19dp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/syncPayTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:text="Last Synced on " />
+        </LinearLayout>
+
+        <!--sync all-->
+        <LinearLayout
+            android:id="@+id/syncBtnAllContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/syncBtnAll"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/btn_round_edge_inside_app"
+                    android:gravity="center|center_horizontal"
+                    android:minWidth="150dp"
+                    android:textColor="@color/btnTxtWhite"
+                    android:padding="10dp"
+                    android:text="Start Sync All"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/sync_progressBarSyncBtnAll"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center|center_horizontal"
+                    android:indeterminate="true"
+                    android:max="100"
+                    android:padding="19dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/syncAllTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:text="Last Synced on " />
+        </LinearLayout>
+
+
+        <!--sync School,teacher & students-->
+        <LinearLayout
+            android:id="@+id/syncBtnSchTechStdContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/syncBtnSchTechStd"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="17dp"
+                    android:textColor="@color/btnTxtWhite"
+                    android:background="@drawable/btn_round_edge_inside_app"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Start Download School, Teacher, Student's Info"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarSyncSchTechStd"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    android:max="100"
+                    android:padding="19dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/syncSchTechStdTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:text="Last Synced on " />
+        </LinearLayout>
+
+
+        <!--sync old reports-->
+        <LinearLayout
+            android:id="@+id/syncBtnReportOldContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/syncBtnReportOld"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/btn_round_edge_inside_app"
+                    android:gravity="center"
+                    android:textColor="@color/btnTxtWhite"
+                    android:padding="10dp"
+                    android:text="Download Old Reports"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/sync_progressBarSyncBtnReportOld"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    android:max="100"
+                    android:padding="19dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/syncReportOldTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:text="Last Synced on " />
+        </LinearLayout>
+
+
+        <!--common progressbar-->
+        <ProgressBar
+            android:id="@+id/sync_progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:indeterminate="true"
+            android:max="100"
+            android:padding="4dp"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
